@@ -26,10 +26,17 @@
       </table>
 
       <script type="text/javascript"> 
-        
-        lpTag.section = [
-        "title"
-];
+        lpTag.sdes = lpTag.sdes||[];
+    lpTag.sdes.push(
+   {
+        "type": "lead",  //MANDATORY
+            "lead": {
+            "topic": "Site Title: " + document.getElementsByTagName("title")[0].innerHTML,  //TOPIC OR NAME OF A SUBMITTED LEAD
+            "value": 22.22,  //EVALUATED VALUE OF THE LEAD
+            "leadId": "xyz123"  //LEAD IDENTIFIER OR TICKET ID
+        }
+   }
+);
         </script>
 
 </body>
