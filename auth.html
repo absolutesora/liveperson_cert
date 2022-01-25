@@ -16,6 +16,17 @@
 
     <a href="index.html"> return to main</a>
 
+    <script type="text/javascript">
+        // Start authetication API
+
+        const jwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lkcC5saXZlcGVyc29uLm5ldCIsImFjciI6ImxvYTEiLCJzdWIiOiJhdXRoZW50aWNhdGVkIiwiaWQiOjEyMzQ1Nn0.51qeTXpVpS7wIUbHizsB1i0Jwu-UOcupFfXDQLxXGqs'
+        lpTag.identities=[];
+        lpTag.identities.push(identityFn);
+        function identityFn(callback) {
+            callback(jwt);
+        }
+    </script>
+
 
 </body>
 </html>
