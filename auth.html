@@ -17,12 +17,23 @@
     <a href="index.html"> return to main</a>
 
     <script type="text/javascript">
+        lpTag.sdes = lpTag.sdes||[];
+        lpTag.sdes.push(
+        {
+        "type": "lead",  //MANDATORY
+            "lead": {
+            "topic": document.getElementsByTagName("title")[0].innerHTML,  //TOPIC OR NAME OF A SUBMITTED LEAD
+            "leadId": "xyz345"  //LEAD IDENTIFIER OR TICKET ID
+        }
+        }
+    );
+
         // Start authetication API
         lpTag.identities=[];
         lpTag.identities.push(identityFn);
         function identityFn(callback) {
             console.log('User is authenticated already');
-            const jwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lkcC5saXZlcGVyc29uLm5ldCIsImFjciI6ImxvYTEiLCJzdWIiOiJhdXRoZW50aWNhdGVkIiwiaWQiOjEyMzQ1Nn0.51qeTXpVpS7wIUbHizsB1i0Jwu-UOcupFfXDQLxXGqs';
+            const jwt = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2lkcC5saXZlcGVyc29uLm5ldCIsImFjciI6ImxvYTEiLCJzdWIiOiJhdXRoZW50aWNhdGVkIiwiaWQiOjEyMzQ1Nn0.CtEV0fAP4Mh83TqDPPeHhhcSA-l-pWmkw9NRFuEw9pU';
 
             callback(jwt);
         }
