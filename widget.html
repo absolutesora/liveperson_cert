@@ -20,9 +20,9 @@
     var chat = document.getElementById("chat");
     var info = "chatTranscript.lines";
 
-    var onSucess = function(data){
+    var getData = function(data){
         console.log("success");
-        const lastItem = data[data.length -1];
+        var lastItem = data[data.length -1];
         console.log(lastItem.text);
         chat.innerText = lastItem.text;
     }
@@ -30,7 +30,7 @@
         console.log("Error!")
     }
 
-    lpTag.agentSDK.get(info, onSuccess, onError);
+    lpTag.agentSDK.bind(info, getData, onError);
 
     </script>
 
