@@ -2,24 +2,6 @@
 <html lang="en">
 <head>
     <script type="text/javascript" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
-    <script type="text/javascript">
-        lpTag.agentSDK.init()
-    
-        var chat = document.getElementById("chat");
-        var info = "chatTranscript.lines";
-    
-        var onSucess = function(data){
-            console.log("success");
-            console.log(data);
-            chat.innerText = data[12].text;
-        }
-        var onError = function(err){
-            console.log("Error!")
-        }
-    
-        lpTag.agentSDK.get(info, onSuccess, onError);
-    
-    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +12,26 @@
     <h1>Hello World</h1>
 
     <div id="chat"></div>
+    
 
+    <script type="text/javascript">
+    lpTag.agentSDK.init()
+
+    var chat = document.getElementById("chat");
+    var info = "chatTranscript.lines";
+
+    var onSucess = function(data){
+        console.log("success");
+        console.log(data);
+        chat.innerText = data[12].text;
+    }
+    var onError = function(err){
+        console.log("Error!")
+    }
+
+    lpTag.agentSDK.get(info, onSuccess, onError);
+
+    </script>
 
 </body>
 </html>
