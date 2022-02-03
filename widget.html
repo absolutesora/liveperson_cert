@@ -10,20 +10,26 @@
 <body>
 
     <h1>Hello World</h1>
+
+    <div id="chat"></div>
+
     
 <script type="text/javascript">
     lpTag.agentSDK.init()
 
+    var chat = document.getElementById("chat");
+    var info = "chatTranscript.lines";
+
     var onSucess = function(data){
         console.log("success");
+        chat.innerText = data;
     }
     var onError = function(err){
         console.log("Error!")
     }
 
-    var pathToData = "chatInfo.chatSkill";
+    lpTag.agentSDK.get(info, onSuccess, onError);
 
-    lpTag.agentSDK.bind(pathToData, onSuccess, onError);
 </script>
 
 </body>
