@@ -20,12 +20,21 @@
     var chat = document.getElementById("chat");
     var info = "chatTranscript.lines";
 
-    var getData = function(data){
+    // var getData = function(data){
+    //     console.log("success");
+    //     var lastItem = data[data.length -1];
+    //     console.log(lastItem.text);
+    //     chat.innerText = lastItem.text;
+    // }
+
+    var updateCallback = function(data){
         console.log("success");
-        var lastItem = data[data.length -1];
-        console.log(lastItem.text);
-        chat.innerText = lastItem.text;
+        var path = data.key
+        var value = data.newValue
+        console.log(path);
+        console.log(value);
     }
+
     var onError = function(err){
         console.log("Error!")
     }
