@@ -8,10 +8,15 @@
     <title>Widget Page</title>
 </head>
 <body>
+
+    <h1>Hello World</h1>
     
 <script type="text/javascript">
     lpTag.agentSDK.init()
-    
+
+    var pathToData = "visitorInfo.visitorName";
+
+    lpTag.agentSDK.get(pathToData, onSuccess, onError);
 </script>
 
 </body>
