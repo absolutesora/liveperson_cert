@@ -23,7 +23,7 @@
     var onSucess = function(data){
         console.log("success");
         console.log(data);
-        chat.innerText = data.json();
+        chat.innerText = data[0].json();
     }
     var onError = function(err){
         console.log("Error!")
