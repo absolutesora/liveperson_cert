@@ -29,8 +29,8 @@
 
     var updateCallback = function(data){
         console.log("success");
-        var path = data.key
-        var value = data.newValue
+        var path = data[data.length-1].text;
+        var value = data[data.length-1].newValue;
         console.log(path);
         console.log(value);
     }
