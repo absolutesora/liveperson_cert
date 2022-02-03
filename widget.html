@@ -22,8 +22,9 @@
 
     var onSucess = function(data){
         console.log("success");
-        console.log(data);
-        chat.innerText = data[12].text;
+        const lastItem = data[data.length -1];
+        console.log(lastItem.text);
+        chat.innerText = lastItem.text;
     }
     var onError = function(err){
         console.log("Error!")
