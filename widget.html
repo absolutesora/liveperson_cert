@@ -29,10 +29,10 @@
 
     var updateCallback = function(data){
         console.log("success", data);
-        var latest = data.newValue;
-        console.log(latest[latest.length-1]);
-        console.log(latest[latest.length-1].text);
+        var latest = data.newValue[newValue.length-1];
+        console.log(latest.text);
         // chat.innerText = lastest;
+        return latest
     };
 
     var onError = function(err){
@@ -42,7 +42,7 @@
     };
 
     lpTag.agentSDK.bind(info, updateCallback, onError);
-
+    chat.innerText = latest.text;
     </script>
 
 </body>
