@@ -29,9 +29,9 @@
 
     var updateCallback = function(data){
         console.log("success", data);
-        var latest = data.newValue[0].text;
-        console.log(lastest);
-        chat.innerText = lastest;
+        var latest = data.newValue;
+        console.log(lastest[latest.length-1]);
+        // chat.innerText = lastest;
     };
 
     var onError = function(err){
