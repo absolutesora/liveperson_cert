@@ -33,7 +33,7 @@
         var latest = data.newValue[data.newValue.length-1].text;
         var source = data.newValue[data.newValue.length-1].source;
         console.log(latest);
-        if (source ==! "agent"){
+        if (source !== "agent"){
         fetch(`https://www.omdbapi.com/?apikey=${api}&t=${latest}`)
             .then(function (response){
                 return response.json();
