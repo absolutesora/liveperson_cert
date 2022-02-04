@@ -38,7 +38,7 @@
             })
             .then(function(movie){
                 console.log(movie);
-                chat.innerHTML = JSON.stringify(movie);
+                chat.innerHTML = `<p>Title:</p>${movie.Title}<br>${movie.Actors}<br>${movie.Year}`;
             });
         
     };
