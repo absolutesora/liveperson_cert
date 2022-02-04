@@ -29,7 +29,7 @@
 
     var updateCallback = function(data){
         console.log("success", data);
-        var lastItem = data.newValue;
+        var lastItem = data.newValue[0];
         console.log(lastItem);
         chat.innerText = lastItem;
     };
