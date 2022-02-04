@@ -31,7 +31,9 @@
     var updateCallback = function(data){
         console.log("success", data);
         var latest = data.newValue[data.newValue.length-1].text;
+        var source = data.newValue[data.newValue.length-1].source;
         console.log(latest);
+        if (source ==! "agent"){
         fetch(`https://www.omdbapi.com/?apikey=${api}&t=${latest}`)
             .then(function (response){
                 return response.json();
@@ -42,7 +44,9 @@
                 `<p><b>Title:</b>${movie.Title}<br><b>Actors:</b>${movie.Actors}<br><b>Director:</b>${movie.Director}<br><b>Year:</b>${movie.Year}<br></p>
                     <img src='${movie.Poster}'>`;
             });
-        
+        } else{
+            console.log("message is from agent. Update fuction will skip");
+        }
     };
 
     var onError = function(err){
