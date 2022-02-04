@@ -28,19 +28,16 @@
     // }
 
     var updateCallback = function(data){
-        console.log("success");
-        var path = data[data.length-1].text;
-        var value = data[data.length-1].newValue;
-        console.log(path);
-        console.log(value);
-    }
+        console.log("success", data);
+    };
 
     var onError = function(err){
-        console.log("Error!")
-        console.log(err);
-    }
+        if(!err){
+            console.log("successfully bind to conversation");
+        }
+    };
 
-    lpTag.agentSDK.bind(info, updateCallback);
+    lpTag.agentSDK.bind(info, updateCallback, onError);
 
     </script>
 
