@@ -30,8 +30,8 @@
     var updateCallback = function(data){
         console.log("success", data);
         var lastItem = data.newValue;
-        console.log(lastItem.text);
-        chat.innerText = lastItem.text;
+        console.log(lastItem);
+        chat.innerText = lastItem;
     };
 
     var onError = function(err){
