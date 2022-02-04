@@ -38,7 +38,9 @@
             })
             .then(function(movie){
                 console.log(movie);
-                chat.innerHTML = `<p>Title:</p>${movie.Title}<br>${movie.Actors}<br>${movie.Year}`;
+                chat.innerHTML = 
+                `<p><b>Title:</b>${movie.Title}<br><b>Actors:</b>${movie.Actors}<br><b>Director:</b>${movie.Director}<br><b>Year:</b>${movie.Year}<br></p>
+                    <img src='${movie.Poster}'>`;
             });
         
     };
