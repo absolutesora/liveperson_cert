@@ -36,11 +36,11 @@
             .then(function (response){
                 return response.json();
             })
-            .then(function(data){
-                console.log(data);
+            .then(function(movie){
+                console.log(movie);
             });
             
-            chat.innerHTML = JSON.stringify(data); 
+            chat.innerHTML = JSON.parse(movie); 
         
     };
 
