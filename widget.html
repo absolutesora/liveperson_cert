@@ -31,8 +31,8 @@
         console.log("success", data);
         var latest = data.newValue[data.newValue.length-1].text;
         console.log(latest);
-        // chat.innerText = lastest;
-        return latest;
+        chat.innerText = latest;
+        
     };
 
     var onError = function(err){
@@ -42,7 +42,6 @@
     };
 
     lpTag.agentSDK.bind(info, updateCallback, onError);
-    chat.innerText = latest;
     </script>
 
 </body>
