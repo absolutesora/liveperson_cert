@@ -38,9 +38,8 @@
             })
             .then(function(movie){
                 console.log(movie);
+                chat.innerHTML = JSON.stringify(movie);
             });
-            
-            chat.innerHTML = JSON.stringify(movie); 
         
     };
 
