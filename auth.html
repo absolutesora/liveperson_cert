@@ -28,7 +28,7 @@
         }
     );
 
-        // use authenticated campaign
+        // use authenticated campaign - the below code expressing that this site is authenticated (sub value)
         lpTag.identities=[];
         lpTag.identities.push(identityFn);
         function identityFn(callback){
@@ -41,7 +41,7 @@
     </script>
 
     <script type="text/javascript">
-         //authenticate JWT code
+         //authenticate JWT code, JWT is hardcoded (jwtlibary can generate token in node.js)
          function authenticate(callback) {
 
             console.log('authentication function is called');
